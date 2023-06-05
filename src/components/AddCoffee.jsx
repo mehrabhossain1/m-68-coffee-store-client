@@ -40,7 +40,7 @@ const AddCoffee = () => {
             </label>
             <label className="input-group">
               <input
-                name="supplier"
+                name="supplier" 
                 type="text"
                 placeholder="Supplier Name"
                 className="input input-bordered w-full"
