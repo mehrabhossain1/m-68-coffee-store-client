@@ -4,7 +4,7 @@ const AddCoffee = () => {
       <h2 className="text-3xl font-extrabold">Add a coffee</h2>
       <form>
         {/* form name and quantity row */}
-        <div className="md:flex">
+        <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text">Coffee Name</span>
@@ -33,14 +33,14 @@ const AddCoffee = () => {
           </div>
         </div>
         {/* form supplier row */}
-        <div className="md:flex">
+        <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text">Supplier</span>
             </label>
             <label className="input-group">
               <input
-                name="supplier" 
+                name="supplier"
                 type="text"
                 placeholder="Supplier Name"
                 className="input input-bordered w-full"
@@ -49,47 +49,64 @@ const AddCoffee = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">Available Quantity</span>
+              <span className="label-text">Taste</span>
             </label>
             <label className="input-group">
               <input
-                name="quantity"
+                name="taste"
                 type="text"
-                placeholder="Available Quantity"
+                placeholder="Taste"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
         </div>
-        {/* form row */}
-        <div className="md:flex">
+        {/* form category and details row */}
+        <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Coffee Name</span>
+              <span className="label-text">Category</span>
             </label>
             <label className="input-group">
               <input
-                name="name"
+                name="category"
                 type="text"
-                placeholder="Your Coffee Name"
+                placeholder="Category"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">Available Quantity</span>
+              <span className="label-text">Details</span>
             </label>
             <label className="input-group">
               <input
-                name="quantity"
+                name="details"
                 type="text"
-                placeholder="Available Quantity"
+                placeholder="Details"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
         </div>
+        {/* form Photo url row */}
+        <div className="mb-8">
+          <div className="form-control w-full">
+            <label className="label">
+              <span className="label-text">Photo URL</span>
+            </label>
+            <label className="input-group">
+              <input
+                name="photo"
+                type="text"
+                placeholder="Photo URL"
+                className="input input-bordered w-full"
+              />
+            </label>
+          </div>
+        </div>
+        <input type="submit" value="Add Coffee" className="btn btn-block" />
       </form>
     </div>
   );
