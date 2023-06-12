@@ -1,9 +1,12 @@
 const CoffeeCard = ({ coffee }) => {
-  console.log(coffee);
+  // console.log(coffee);
+
+  const { name, quantity, supplier, taste, category, details, photo } = coffee;
+
   return (
     <div className="card card-side bg-base-100 shadow-xl">
       <figure>
-        <img src={coffee.photo} alt="Movie" />
+        <img src={photo} alt="Movie" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">New movie is released!</h2>
