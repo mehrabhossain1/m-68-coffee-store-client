@@ -9,8 +9,10 @@ const CoffeeCard = ({ coffee }) => {
         <img src={photo} alt="Movie" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
+        <h2 className="card-title">Coffee Name: {name}</h2>
+        <p>Quantity: {quantity}</p>
+        <p>Supplier: {supplier}</p>
+        <p>Taste: {taste}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Watch</button>
         </div>
