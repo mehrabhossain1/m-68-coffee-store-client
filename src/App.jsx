@@ -10,6 +10,7 @@ function App() {
       <h1 className="text-6xl text-center text-purple-600 my-20">
         Hot Hot Cold Coffee: {coffees.length}
       </h1>
+      {/* coffee card */}
       <div className="grid md:grid-cols-2 gap-4">
         {coffees.map((coffee) => (
           <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
