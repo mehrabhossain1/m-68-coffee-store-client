@@ -18,7 +18,7 @@ const UpdateCoffee = () => {
     const details = form.details.value;
     const photo = form.photo.value;
 
-    const newCoffee = {
+    const updatedCoffee = {
       name,
       quantity,
       supplier,
@@ -27,23 +27,23 @@ const UpdateCoffee = () => {
       details,
       photo,
     };
-    console.log(newCoffee);
+    console.log(updatedCoffee);
 
     // send data to the server
-    fetch("http://localhost:5000/coffee", {
-      method: "POST",
+    fetch(`http://localhost:5000/coffee/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newCoffee),
+      body: JSON.stringify(updatedCoffee),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "User added successfully",
+            text: "Coffee Updated successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
